@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="theme-switch">
+        <input type="checkbox" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle">
+            <span></span>
+        </label>
+    </div>
+
+    <main>
+        <section class="card-detail">
+            <div class="card-number">
+                <p id="card-number-p">0000 0000 0000 0000</p>
+            </div>
+
+            <div class="holder-exp-cvv">
+                <div class="div-holder-exp-cvv">
+                    <p class="card-holder">Card Holder</p>
+                    <p id="card-holder" class="card-holder"> </p>
+                </div>
+
+                <div class="div-holder-exp-cvv">
+                    <p class="card-exp">Valid THRU</p>
+                    <p id="card-exp" class="card-exp"> </p>
+                </div>
+
+                <div class="div-holder-exp-cvv">
+                    <p class="card-holder">Card CVV2</p>
+                    <p id="card-cvv" class="card-cvv"> </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="payment-details">
+            <p class="payment-detail-p">Payment Details</p>
+
+            <div class="holder-number-exp-cvv">
+                <p class="holder-number-exp-cvv-p">Cardholder Name</p>
+                <input type="text" placeholder="Mrs Kate Smith" id="card-holder-input"
+                    class="holder-number-exp-cvv-input">
+                <img src="Material/contact-icon.png" class="holder-number-exp-cvv-icon">
+                <div class="warning" id="warning-name">
+                    <p id="holder-warning"></p>
+                </div>
+            </div>
+
+            <div class="holder-number-exp-cvv">
+                <p class="holder-number-exp-cvv-p">Card Number</p>
+                <input type="text" placeholder="0000 0000 0000 0000" id="card-number-input"
+                    class="holder-number-exp-cvv-input">
+                <img src="Material/creditcard-icon.png" class="holder-number-exp-cvv-icon">
+                <div class="warning" id="warning-number">
+                    <p id="number-warning"></p>
+                </div>
+            </div>
+
+            <div class="cvv-exp">
+                <div class="holder-number-exp-cvv">
+                    <p class="holder-number-exp-cvv-p">Card Exp</p>
+                    <input type="text" placeholder="MM/YY" id="card-exp-input" class="holder-number-exp-cvv-input">
+                    <img src="Material/calendar-icon.png" class="holder-number-exp-cvv-icon">
+                    <div class="warning" id="warning-exp">
+                        <p id="exp-warning"></p>
+                    </div>
+                </div>
+
+                <div class="holder-number-exp-cvv">
+                    <p class="holder-number-exp-cvv-p">Card CVV2</p>
+                    <input type="text" placeholder="0000" id="card-cvv-input" class="holder-number-exp-cvv-input">
+                    <img src="Material/lock-icon.png" class="holder-number-exp-cvv-icon">
+                    <div class="warning" id="warning-cvv">
+                        <p id="cvv-warning"></p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="continue-btn">Continue</button>
+        </section>
+    </main>
+    <script src="Credit-payment.js"></script>
+</body>
+
+</html>

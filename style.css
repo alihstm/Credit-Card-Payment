@@ -1,0 +1,272 @@
+.theme-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.theme-switch input[type="checkbox"] {
+  display: none;
+}
+
+.theme-switch label {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.theme-switch label span {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.theme-switch input[type="checkbox"]:checked + label {
+  background-color: #333;
+}
+
+.theme-switch input[type="checkbox"]:checked + label span {
+  transform: translateX(20px);
+}
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+  transition: 0.15s;
+}
+.dark-mode main {
+  background-color: black;
+}
+.dark-mode .card-detail {
+  box-shadow: none;
+  transition: 0.15s;
+}
+.dark-mode .payment-detail-p {
+  color: white;
+  transition: 0.15s;
+}
+.dark-mode .holder-number-exp-cvv-p {
+  color: rgb(209, 209, 209);
+}
+body {
+  background: linear-gradient(to bottom, rgb(91, 7, 155), rgb(16, 174, 253));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 200px;
+  margin: 0px;
+}
+p {
+  user-select: none;
+}
+main {
+  vertical-align: middle;
+  height: 450px;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 24px;
+  padding-left: 50px;
+  margin: 0px;
+}
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: 140px;
+  width: 450px;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  background: linear-gradient(to top, rgb(91, 7, 155), rgb(16, 174, 253));
+  box-shadow: 0 0 20px 0px rgb(202, 202, 202),
+    0px 0px 30px 0px rgb(202, 202, 202), 0px 0px 0px rgb(202, 202, 202);
+  border-radius: 16px;
+  margin: 0px;
+}
+.card-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+}
+.card-number p {
+  margin: 0px;
+  font-family: arial;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+.holder-exp-cvv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 410px;
+  height: 70px;
+  margin: 0px;
+}
+.div-holder-exp-cvv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+:is(.card-holder, .card-exp, .card-cvv) {
+  opacity: 0.7;
+  font-family: poppins;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+}
+#card-holder {
+  opacity: 1;
+  margin: 0px;
+}
+#card-exp {
+  opacity: 1;
+  margin: 0px;
+}
+#card-cvv {
+  opacity: 1;
+  margin: 0px;
+}
+.payment-details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  width: 330px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 90px;
+  height: 400px;
+  margin: 0px;
+}
+.payment-detail-p {
+  font-family: poppins;
+  font-size: 25px;
+  font-weight: 700;
+  color: darkslategray;
+  margin: 0px;
+}
+.holder-number-exp-cvv {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: 80px;
+}
+.holder-number-exp-cvv-p {
+  font-family: open sans;
+  font-size: 15px;
+  color: rgb(116, 116, 116);
+  font-weight: 400;
+  margin: 0px;
+}
+#card-holder-warning {
+  margin: 0px;
+}
+.holder-number-exp-cvv-input {
+  padding-left: 35px;
+  padding-right: 110px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 3px;
+  font-family: open sans;
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid rgb(188, 188, 188);
+  transition: 0.15s;
+  margin: 0px;
+}
+.holder-number-exp-cvv-input::placeholder {
+  opacity: 0.3;
+}
+.holder-number-exp-cvv-input:focus {
+  font-family: open sans;
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(91, 7, 155);
+  border: none;
+  outline: none;
+}
+.holder-number-exp-cvv-icon {
+  position: sticky;
+  margin-top: -30px;
+  margin-left: 5px;
+}
+.warning {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+}
+.warning p {
+  color: rgb(255, 89, 89);
+  font-family: arial;
+  font-size: 13px;
+  font-weight: 600;
+}
+#warning-number {
+  width: 145px;
+}
+:is(#warning-exp, #warning-cvv) {
+  width: 95px;
+}
+.cvv-exp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 230px;
+  margin: 0px;
+}
+#card-exp-input {
+  padding-left: 35px;
+  padding-right: 0px;
+  width: 70px;
+}
+#card-cvv-input {
+  padding-left: 35px;
+  padding-right: 0px;
+  width: 70px;
+}
+.payment-details button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+  border: none;
+  color: white;
+  background: rgb(91, 7, 155);
+  height: 40px;
+  font-family: poppins;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+.payment-details button:hover {
+  background-color: rgb(16, 174, 253);
+  color: white;
+  cursor: pointer;
+}
+.payment-details button:active {
+  transform: scale(0.9);
+}
